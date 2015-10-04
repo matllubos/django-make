@@ -1,3 +1,9 @@
 #!/usr/bin/env python
+from make.command import commands
+import sys
 
-print 'pokus'
+
+if __name__ == "__main__":
+    cmd_name = sys.argv[1]
+
+    commands[cmd_name]().handle(*sys.argv[2:])
